@@ -95,10 +95,10 @@ class SnakeGameAI:
 
         # check if snake is closer to food
         if dist_after < dist_before:
-            raw_reward = 1 + (self.frame_iteration * 0.005)
+            raw_reward = 0.5 + (self.frame_iteration * 0.005)
             self.reward += raw_reward  # 鼓励靠近食物
         else:
-            raw_reward = 1 + (self.frame_iteration * 0.007)
+            raw_reward = 0.5 + (self.frame_iteration * 0.007)
             self.reward += - raw_reward # 惩罚远离食物
 
         # if self.frame_iteration % random.randint(30, 50) == 0:
